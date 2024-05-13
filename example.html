@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    #nav {
+        width: 100%;
+        background-color: black;
+        height: 60px;
+        /* position: -webkit-sticky;
+        position: sticky;
+        top: 0px; */
+        position: fixed;
+        z-index: 1000;
+    }
+
+    * {
+        padding: 0;
+        margin: 0;
+        font-family: "open sans",sans-serif;
+        overflow-x: hidden;
+    }
+
+    ul {
+        float: right;
+    }
+
+    ul li {
+        display: inline-block;
+        position: relative;
+    }
+
+    ul li a {
+        display: block;
+        padding: 20px 25px;
+        color: #fff;
+        text-decoration: none;
+        text-align: center;
+        font-size: 15px;
+    }
+
+    ul li ul.dropdown li {
+        display: block;
+    }
+
+    ul li ul.dropdown {
+        width: 100%;
+        background: #112c66;
+        position: absolute;
+        z-index: 999;
+        display: none;
+    }
+
+    ul li a:hover {
+        background: gray;
+    }
+
+    ul li:hover ul.dropdown {
+        display: block;
+    }
+
+    .container {
+        position: relative;
+        text-align: center;
+        color: white;
+        overflow: hidden;
+    }
+
+    .centered {
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 60px;
+    }
+
+    .welcome {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 40px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: bolder;
+    }
+
+    .tour {
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-40%, -40%);
+        font-size: 50px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: bolder;
+    }
+
+    .rent {
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-40%, -40%);
+        font-size: 70px;
+        white-space: nowrap;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .content {
+        height: 50px;
+        width: 100%;
+        background-color: black;
+        color: white;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    h1{
+        text-align:center;
+        font-size: 40px;
+        color: aliceblue;
+    }
+
+    header {
+        background-color: #4CAF50;
+        color: white;
+        padding: 1rem;
+        text-align: center;
+        width: 100%;
+    }
+   
+
+    main {
+        padding: 2rem;
+        padding-left: 0px;
+    }
+
+    p {
+        font-size: 25px;
+        text-align: left;
+        max-width: 43%;
+        margin-right: 10%;
+        color: white;
+    }
+
+    .our p {
+        font-size: 25px;
+        margin-top: 50px;
+        text-align: justify;
+        text-align: left;
+        max-width: 43%;
+        margin-left: 60%;
+        color: white;
+    }
+
+    aside {
+        flex: 0;
+        padding: 0rem;
+        text-align: right;
+        margin-top: -200px;
+    }
+
+    aside img {
+        max-width: 55%;
+        height: 40%;
+    }
+
+    .our aside {
+        flex: 0;
+        padding: 0rem;
+        text-align: left;
+        margin-top: -250px;
+    }
+
+    .our aside img {
+        max-width: 55%;
+        height: 40%;
+    }
+
+    body{
+        background-color: black;
+    }
+
+    .contact-info h3 {
+        text-align: center;
+        color: white;
+        margin-top: 2%;
+        margin-bottom: 1%;
+    }
+
+    .contact-info p {
+       text-align: center;
+       margin-bottom: 1px;
+       margin-left: 28%;
+    }
+    #nav,#our{
+        overflow-y: hidden;
+    }
+    footer {
+        background-color: #333;
+        padding: 0rem;
+        text-align: center;
+        color: white;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .slider{
+        height: 55vh;
+        width: 50vw;
+        background-image: url(images/s1.jpg);
+        background-size: 100% 100%;
+        box-shadow: var(--black) 10px 10px 24px;
+        animation:changeImage 30s infinite;
+        margin-left: 45%;
+    }
+ 
+    #aheader,#oservice{
+        margin-top: 40px;
+    }
+    #img1{
+        padding-bottom: 55px;
+        padding-top: 0px;
+        padding-left: 40px;
+        width: 50vw;
+        margin-top: -50px;
+    }
+    @keyframes changeImage{
+    0%{
+        background-image: url(images/OIP\ \(12\).jpg);
+    }
+    25%{
+        background-image: url(images/download\ \(1\).jpg);
+    }
+    50%{
+        background-image: url(images/OIP\ \(12\).jpg);
+    }
+    75%{
+        background-image: url(images/OIP\ \(11\).jpg);
+    }
+    100%{
+        background-image: url(images/OIP\ \(12\).jpg);
+    }
+}
+.fa-square-twitter{
+    font-size: 50px;
+    overflow-y:hidden ;
+    margin-right: 20px;
+}
+.fa-square-facebook{
+    font-size: 50px;
+    overflow-y:hidden ;
+    margin-right: 20px;
+}
+.fa-square-instagram{
+    font-size: 50px;
+    overflow-y:hidden ;
+    margin-right: 20px;
+}
+.fa-square-whatsapp{
+    font-size: 50px;
+    overflow-y:hidden ;
+    margin-right: 20px;
+}
+@media only screen and (max-width: 992px) {
+            .centered {
+                font-size: 30px;
+            }
+            .tour {
+                font-size: 25px;
+            }
+            .rent {
+                font-size: 40px;
+            }
+            p, .our p {
+                max-width: 100%;
+                margin: 0 auto 20px;
+                text-align: center;
+            }
+            aside, .our aside {
+                display: none;
+            }
+            .slider {
+                margin: 0 auto;
+            }
+}
+@media only screen and (max-width: 600px) {
+    #nav {
+        height: auto;
+    }
+    ul {
+        float: none;
+        text-align: center;
+    }
+    ul li {
+        display: block;
+    }
+    ul li a {
+        padding: 15px 20px;
+    }
+    .container {
+        margin-top: 200px;                                                                                                                                                                  
+    }
+    .centered {
+        font-size: 20px;
+        top: 25%;
+        padding-top: 40px;
+    }
+    .tour {
+        font-size: 20px;
+        top: 35%;
+        padding-top: 20px;
+    }
+    .rent {
+        font-size: 30px;
+        top: 45%;
+    }
+    .welcome{
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+}
+
+</style>
+
+<body>
+
+    <div id="nav">
+        <ul>
+            <li><a href="example.html">Home</a></li>
+            <li><a href="#about-us">About Us</a></li>
+            <li><a href="#our-services">Our Services</a></li>
+            <li><a href="#contact-us">Contact Us</a></lContai>
+            <li><a href="login.html">Login</a></li>
+            
+        </ul>
+    </div>
+    
+    <div class="container">
+        <img src="images/car2.jpg" width="100%" height="auto">
+        <b><div class="welcome">Welcome To</div></b>
+        <div class="centered">Nagasaki Tours</div>
+        <div class="tour">&</div>
+        <div class="rent">Rent a Car</div>
+    </div>
+    <div id="about-us" class="section about-us"></div>
+    <header id="aheader">
+        <h1>About Us</h1>
+    </header>
+    <main>
+        <div id="slidertext">
+            <p>Founded in 2017 by M.A.M Sadir, Nagasaki Tours and Rent a Car Company is Located in 
+                Muruthalawa,Kandy,Sri Lanka. be it Coparate Transport a Wedding or any Special 
+                Occation we offer, amooth and uninterrupted service tollor made to your 
+                satisfication.
+            </p>
+        </div>
+        <aside>
+            <div class="slider"></div>
+        </aside>
+        <div id="our-services" class="section our-services"></div>
+        <header id="oservice">
+            <h1>Our Services</h1>
+        </header>
+        <div class="our" id="our">
+            <p>Nagasaki tours and rent a car offers a wide range of transfortation service on self 
+                drive bas is and also consider as a popular vehicle service. we provide vehicles 
+                for special occutions including wedding and city transfers for  airport tours.
+            </p>
+            <aside>
+                <img id="img1" src="images/OIP.jpg">
+            </aside>
+        </div>
+        <div id="contact-us" class="section contact-us"></div>
+        <header>
+            <h1 id="con">Contact Us</h1>
+        </header>
+        <div class="contact-info">
+            <h3>Phone</h3>
+            <p>0777711871</p>
+            <p>0772650585</p>
+        </div>
+        <div class="contact-info">
+            <h3>Email</h3>
+            <p>srilankanagasakitours@gmail.com</p>
+        </div>
+        <div class="contact-info">
+            <h3>Address</h3>
+            <p>Muruthalawa,Kandy,Sri Lanka.</p>
+        </div>
+    </main>
+    <footer>
+        <i class="fa-brands fa-square-twitter"></i>
+        <i class="fa-brands fa-square-facebook"></i>
+        <i class="fa-brands fa-square-instagram"></i>
+        <i class="fa-brands fa-square-whatsapp"></i>
+        <p>© 2024 All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

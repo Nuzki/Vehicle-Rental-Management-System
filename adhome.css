@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "Philosopher", sans-serif;
+}
+body{
+    background: url(images/pexels-photo-5158199.jpeg.jpg);
+    background-position: center;
+    background-size: cover;
+}
+:root {
+    --bg-color: #F5F5F5;
+    --second-bg-color: #F05454;
+    --text-color-main: #394867;
+    --text-color-second: #9BA4B5;
+    --main-color: #121212;
+}
+span{
+    color: #F05454;
+}
+.header {
+    background-color: var(--second-bg-color);
+    padding: 20px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    height: 50px;
+}
+.navbar {
+    display: flex;
+    justify-content: center; /* To push items to the sides */
+    align-items: center; /* To vertically center items */
+}
+
+/* Style for navigation links */
+.navbar ul {
+    list-style-type: none; /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar li {
+    margin-left: 20px; /* Adjust spacing between links as needed */
+    position: relative; /* Needed for animated underline */
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--bg-color); /* Adjust link color as needed */
+    position: relative; /* Needed for animated underline */
+}
+
+.navbar ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: var(--bg-color);
+    margin: auto;
+    display: block;
+    transition: 0.5s;
+
+
+}
+.navbar ul li:hover::after{
+    width: 100%;
+
+}
+/* Home section style */
+.home{
+    min-height: 600px;
+    margin-top: 50px;
+    padding-top: 70px;
+}
+
+.title-container{
+    padding: 40px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height:200px;
+}
+.title-container h1{
+    font-size: 60px;
+    color: var(--bg-color);
+}
+.image-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.image-container img{
+    border-radius: 50px;
+}
+.form-container button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 4px solid whitesmoke; 
+    color: var(--bg-color); 
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+    text-align: center;
+    width: 350px;
+    font-size: 20px;
+}
+
+.form-container button:hover {
+    background-color: var(--second-bg-color);
+    border: 4px solid var(--bg-color);
+    color: var(--main-color);
+}
+
+@media screen and (max-width: 768px) {
+    .home {
+        padding-top: 120px; 
+    }
+    .header {
+        padding: 0;
+        max-height: 70px; 
+        background: #F05454;
+    }
+    .header .navbar{
+        background-color: #F05454;
+    }
+    .navbar ul {
+        flex-direction: column;
+        text-align: center;
+
+    }
+
+    .navbar li {
+        margin-left: 0; 
+        margin-bottom: 10px;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    
+    .title-container {
+        padding: 20px;
+    }
+
+    .title-container h1 {
+        font-size: 40px;
+    }
+
+    .form-container button {
+        width: 250px; 
+    }
+}

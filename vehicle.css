@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    background:url("images/OIP.jpg");
+    background-size:cover;
+    background-position:center;
+    margin-top: auto;
+    overflow-x: hidden;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* padding: 30px; */
+    /* margin-top: 5%; */
+}
+
+.container .card{
+    width: 308px;
+    position: relative;
+    height: 350px;
+    background: #f0f0f0;
+    margin: 30px 10px;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0.5px 10px #e6e6e6;
+    transition: 0.3s ease-in-out;
+    margin-top: 5%;
+}
+
+.container .card .imgbx{
+    position: relative;
+    width: 280px;
+    height: 180px;
+    top: -60px;
+    left: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,1.2);
+}
+
+.container .card .imgbx img{
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.imgbx:hover img{
+    transform: scale(1.1);
+}
+
+ul {
+    text-align: center;
+}
+
+ul li {
+    display: inline-block;
+    position: relative;
+}
+
+ul li button {
+    display: block;
+    padding: 2px;
+    color: black;
+    background-color: gray;
+    text-align: center;
+    font-size: 17px;
+    width: 100PX;
+    margin-top: 70px;
+}
+
+ul li:hover button{
+    transform: scale(1.1);
+}
